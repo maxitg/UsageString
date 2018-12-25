@@ -30,10 +30,14 @@ UsageString[str__] :=
 	(StringTemplate[StringJoin[{str}]] /. {TemplateSlot[s_] :> $ArgString[s]})[]
 
 
-UsageString::usage = UsageString[
-	"UsageString[\!\(\*SubscriptBox[\(`s`\), \(`1`\)]\), \!\(\*SubscriptBox[\(`s`\), \(`2`\)]\), `\[Ellipsis]`] yields a usage string where \!\(\*SubscriptBox[\(`s`\), \(`i`\)]\) are concatenated ",
-	"and slots enclosed by \` inside of them are rendered in italic similar to official ",
-	"Wolfram Language documentation."
+UsageString::usage = StringJoin[
+	UsageString[
+		"UsageString[\!\(\*SubscriptBox[\(`s`\), \(`1`\)]\), ",
+		"\!\(\*SubscriptBox[\(`s`\), \(`2`\)]\), `\[Ellipsis]`] yields a usage string where ",
+		"\!\(\*SubscriptBox[\(`s`\), \(`i`\)]\) are concatenated and slots enclosed by `",
+		" are rendered in italic similar to official Wolfram Language documentation."],
+	"\nFor example, UsageString[\"f[`x`] yields f of `x`.\"] ",
+	UsageString["will render `x` in italic."]
 ];
 
 
