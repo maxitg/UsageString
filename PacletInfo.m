@@ -1,6 +1,6 @@
 (* Paclet Info File *)
 
-(* created 2019/02/04*)
+(* created 2019/02/05*)
 
 Paclet[
     Name -> "UsageString",
@@ -10,7 +10,8 @@ Paclet[
     Creator -> "Maksim Piskunov",
     Extensions -> 
         {
-            {"Documentation", Language -> "English", MainPage -> "ReferencePages/Symbols/UsageString"}
+            {"Documentation", Language -> "English", MainPage -> "ReferencePages/Symbols/UsageString"}, 
+            {"Application", Context -> "UsageString`"}
         }
 ]
 
