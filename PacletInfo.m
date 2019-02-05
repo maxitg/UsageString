@@ -10,7 +10,7 @@ Paclet[
     Creator -> "Maksim Piskunov",
     Extensions -> 
         {
-            {"Documentation", Language -> "English"}
+            {"Documentation", Language -> "English", MainPage -> "ReferencePages/Symbols/UsageString"}
         }
 ]
 
